@@ -41,20 +41,20 @@ public class Game {
         int score = 0;
         boolean done = levelOne.goalReached();
 
-        if (!done) {
+        if (done) {
             score += levelOne.getPoints();
             done = levelTwo.goalReached();
         }
-        if (!done) {
+        if (done) {
             score += levelTwo.getPoints();
             done = levelThree.goalReached();
         }
-        if (!done) {
+        if (done) {
             score += levelThree.getPoints();
             done = isBonus();
         }
         
-        if (!done) {
+        if (isBonus()) {
             score *= 3;
         }
         
