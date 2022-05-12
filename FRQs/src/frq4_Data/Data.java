@@ -32,7 +32,7 @@ public class Data {
                     value = 10;
                 }
                 
-                while (value % 10 == 0 && value % 100 != 0) {
+                while (value % 10 != 0 || value % 100 == 0) {
                     value = (int) (Math.random() * MAX) + 1;
                 }
                 
