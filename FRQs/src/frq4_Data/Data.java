@@ -32,7 +32,7 @@ public class Data {
                     value = 10;
                 }
                 
-                while (value % 10 == 0 && value % 100 != 0) {
+                while (value % 10 != 0 || value % 100 == 0) {
                     value = (int) (Math.random() * MAX) + 1;
                 }
                 
@@ -47,7 +47,7 @@ public class Data {
      *    grid has at least one element.
      */
     public int countIncreasingCols() {
-        
+        //add a comment
         /* TO BE IMPLEMENTED IN PART (B) */
         int count = 0;
         //Adding a comment here.
