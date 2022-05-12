@@ -48,19 +48,27 @@ public class Data {
      */
     public int countIncreasingCols() {
         
-        /* TO BE IMPLEMENTED IN PART (B) */
-        int count = 0;
-        
-        for (int c = 0; c < grid[0].length; c++) {
-            boolean increasing = false;
-            for (int r = 1; increasing && r < grid.length; r++) {
-                increasing = (grid[r-1][c] > grid[r][c]);
-            }
-            if (increasing) {
-                count++;
-            }
+        ArrayList<Integer> metaData = new ArrayList<Integer>();
+        for (int i = 0; i < grid.length; i++) {
+        	for (int j = 0; grid[i] != null && j < grid[i].length; i++) {
+        		if (metaData.size() <= j) {
+        			metaData.add(grid[i][j]);
+        	    } else if (metaData.get(j) != null) {
+        			if (metaData.get(j) < grid[i][j]) {
+        				metaData.set(j, grid[i][j]);
+        			} else {
+        				metaData.set(j, null);
+        			}
+        		} else {
+        			//do nothing
+        		}
+        	}
         }
-        
+        int count = 0;
+        for (int k = 0; k < metaData.size(); k++) {
+        	if (metaData.get(k) != null)
+        		count++;
+        }
         return count;
     }
     
