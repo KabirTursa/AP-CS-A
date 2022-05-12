@@ -47,7 +47,7 @@ public class Data {
      *    grid has at least one element.
      */
     public int countIncreasingCols() {
-        
+        //add a comment
         /* TO BE IMPLEMENTED IN PART (B) */
         int count = 0;
         
