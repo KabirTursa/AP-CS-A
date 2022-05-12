@@ -50,11 +50,11 @@ public class Data {
         //add a comment
         /* TO BE IMPLEMENTED IN PART (B) */
         int count = 0;
-        
+        //Adding a comment here.
         for (int c = 0; c < grid[0].length; c++) {
-            boolean increasing = false;
+            boolean increasing = true;
             for (int r = 1; increasing && r < grid.length; r++) {
-                increasing = (grid[r-1][c] > grid[r][c]);
+                increasing = (grid[r-1][c] < grid[r][c]);
             }
             if (increasing) {
                 count++;
